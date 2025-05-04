@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Website Title</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script defer src = "/public/formHandler.js"></script>
+
+</head>
+<body>
+    <div class = "allContainer">
+        <nav class="navbar animate-fade-in">
+            <div class="nav-links">
+                <a href = "#about"> About </a>
+                <a href = "#projects"> Projects </a>  
+                <a href = "#contact"> Contact </a></li>
+            </div>
+            <div class = "navsocials">
+                <a href="https://github.com/TaeEllenbecker" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/tae-ellenbecker-384194225/" target="_blank"><i class="fab fa-linkedin"></i></a>    
+            </div>
+        </nav>
+        <section class = "main">
+            <!-- FLIPPING IMAGES -->
+            <section class = "image-section">
+                <div class="flip-card rotate-left">
+                    <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="./assets/rohlik.jpg" alt="" style="object-fit:cover;width:12rem;height:12rem;border-radius: 10px;">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Brno, Czech Republic</h1>
+                        <p>rohlik and kofola in a train station</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="flip-card tilt-right">
+                    <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="./assets/utah.jpg" alt="" style="object-fit:cover;width:12rem;height:12rem;border-radius: 10px;">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Coyote Gulch, Utah</h1>
+                        <p>backpacking in the gulch</p>
+                        
+                        
+                    </div>
+                    </div>
+                </div>
+                <div class="flip-card tilt-left">
+                    <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="./assets/boskovice.jpg" alt="" style="object-fit:cover;width:12rem;height:12rem;border-radius: 10px;">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Boskovice, Czech Republic</h1>
+                        <p>inside a castle</p>
+                        
+                        
+                    </div>
+                    </div>
+                </div>
+                <div class="flip-card rotate-right">
+                    <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="./assets/mspcoffee.jpg" alt="" style="object-fit:cover;width:12rem;height:12rem;border-radius: 10px;">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Minneapolis, Minnesota</h1>
+                        <p>pretty coffee place</p>
+                        
+                        
+                    </div>
+                    </div>
+                </div>
+
+        </section>
+        
+        
+        <!-- About Section -->
+        <div id = "about" class = "about animate-fade-in">
+            
+            <!-- Name... CS Software engineering major... Links to GitHub and Linked in -->
+            <div class= "intro"> 
+                <h1>Hey, I'm Tae Ellenbecker</h1>
+                <p>I'm a Computer Science and Software Engineering student</p>
+                <!-- links -->
+            </div>
+
+            <!-- Skills and experience -->
+            <!-- Skills and Experience Section -->
+            <div class="skills">
+                <h1>Skills and Experience</h1>
+                <div class="skills-icons">
+                    <i class="fa-brands fa-java"></i> 
+                    <i class="devicon-c-plain"></i>
+                    <i class="devicon-python-plain"></i>
+                    <i class="devicon-cplusplus-plain"></i>
+                    <i class="devicon-html5-plain"></i>
+                    <i class="devicon-css3-plain"></i>
+                    <i class="devicon-javascript-plain"></i>
+                    <i class="devicon-git-plain"></i>
+            
+                </div>
+            </div>
+
+        </div>
+        </section>
+        
+        <div id = "projects" class = "projects">
+            <!-- Projects Section -->
+            <div class = "project-container animate-fade-in">
+                
+
+                <div class = "project-card">
+                    <!-- CARD IMAGE -->
+                    <img src = "">
+
+                    <!-- CARD DESCRIPTION -->
+                    <div class = "card-description">
+                        <h1>
+                            Artificial Intelligence Sentiment Analysis
+                        </h1>
+                        <p class = "text-small">
+                            Utilizes <strong>Image to Text</strong> and <strong>Language Processing</strong> to analyze textual sentiment from images — <strong>positive, negative, or neutral.</strong>
+                        </p>
+                    </div>
+
+                    <!-- Skills used icons -->
+                    <div class = "card-skills">
+                        <p>Python</p>
+                        <p>PyTorch</p>
+                        <p>TensorFlow</p>
+                        <p>Hugging Face</p>
+                    </div>
+
+                    <div class = "card-links">
+                        <a href="https://github.com/TaeEllenbecker/AI-Sentiment?tab=readme-ov-file" target="_blank"><i class="fab fa-github"></i> Repository</a>
+                    </div>
+                </div>
+
+                <div class = "project-card">
+                    <!-- CARD IMAGE -->
+                    <img src = "">
+
+                    <!-- CARD DESCRIPTION -->
+                    <div class = "card-description">
+                        <h1>
+                            C++ Minesweeper
+                        </h1>
+                        <p>
+                            Minesweeper built using Fast Light Tool Kit (FLTK) and C++
+                        </p>
+                    </div>
+
+                    <!-- Skills used icons -->
+                    <div class = "card-skills">
+                        <p>C++</p>
+                        <p>FLTK</p>
+                    </div>
+
+                    <div class = "card-links">
+                        <a href="https://github.com/TaeEllenbecker/minesweeper" target="_blank"><i class="fab fa-github"></i> Repository</a>
+                    </div>
+                </div>
+                <div class = "project-card">
+                    <!-- CARD IMAGE -->
+                    <img src = "">
+
+                    <!-- CARD DESCRIPTION -->
+                    <div class = "card-description">
+                        <h1>
+                            Personal Website
+                        </h1>
+                        <p>
+                            Personal portfolio website built using HTML, CSS, and JavaScript.
+                        </p>
+                    </div>
+
+                    <!-- Skills used icons -->
+                    <div class = "card-skills">
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>JavaScript</p>
+                    </div>
+
+                    <div class = "card-links">
+                        <a href="https://github.com/TaeEllenbecker/TaeEllenbecker.github.io" target="_blank"><i class="fab fa-github"></i> Repository</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id = "contact">
+                
+            <form novalidate id="form" action="index.html" method="get" enctype="text/plain" class="message-container">
+
+                    <h1>Message Me</h1>
+                    <label for="name" class="text-medium">Name:</label>
+                    <input type="formName" id="formName" name="formName" required>
+                    <div class = "errorName text-small"></div>
+
+                    <label for="email"class="text-medium">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class = "errorName text-small"></div>
+
+                    <label for="message"class="text-medium">Message:</label>
+                    <textarea id="message" name="message" rows="4" type = "message" required></textarea>
+                    <div class = "errorName text-small"></div>
+                    <button id = "submit" type="submit">Send</button>
+                </form>
+
+
+        </section>
+        <div>
+            <footer>
+                <p>Copyright © 2025 Tae Ellenbecker. All rights reserved.</p>
+            </footer>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

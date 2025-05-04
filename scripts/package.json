@@ -1,0 +1,22 @@
+{
+  "name": "website2.0",
+  "version": "1.0.0",
+  "description": "This website has been created with the intention of showcasing my web development skills using things such as HTML, CSS, and Javascript. It allows me to display my skills, experience, projects, and more! This project has been a lot of fun and a lot of learning as I go.\r I hope you like it!",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TaeEllenbecker/website2.0.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/TaeEllenbecker/website2.0/issues"
+  },
+  "homepage": "https://github.com/TaeEllenbecker/website2.0#readme"
+}
