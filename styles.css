@@ -6,14 +6,14 @@ html{
     --text-color: white;
 }
 
-body{
-    height: 100vh;
+body {
+    margin: 0 auto;
+    padding: 0;
     color: white;
     background-color: #111111;
-    width: 800px;
-    margin: 0 auto;
-    max-width: 600px;
     font-family: Arial, sans-serif;
+    max-width: 600px;
+    width: 100%;
 }
 
 .text-small{
@@ -181,19 +181,22 @@ footer p{
 .card-skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    column-gap: 0.5rem;
+    row-gap: 0.2rem;
 }
-
 
 .card-skills p {
     background-color: #111111;
-    padding: 0.3rem 0.75rem;
+    padding: 0.1rem 0.75rem;
+    margin: 0;
     border-radius: 5px;
     color: white;
     font-weight: 600;
     font-size: .8rem;
+    line-height: 1.5;
     text-align: center;
 }
+
 
 /* Card Links */
 .card-links {
@@ -290,6 +293,7 @@ footer p{
 .tilt-left{
     transform: rotateZ(-5deg);
 }
+
 .flip-card {
     background-color: transparent;
     width: 12rem;
@@ -336,11 +340,26 @@ footer p{
     transform: rotateY(180deg);
   }
 
-  @media (min-width:400px){
-
-    body {
-        padding: 1rem;
-        max-width: 600px;
+@media (max-width: 480px){
+    .image-section{
+        display:flex;
+        justify-content: space-between;
     }
 
-  }
+    .animate-fade-in {
+        opacity: 1;
+        animation: none !important;
+    }   
+
+    .disappear{
+        display:none;
+    }
+
+    /* .tilt-left{
+        transform: rotateZ(0deg);
+    }
+
+    .tilt-right{
+        transform: rotateZ(0deg);
+    } */
+}
