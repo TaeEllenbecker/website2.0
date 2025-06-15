@@ -3,77 +3,39 @@ const formName = document.getElementById('formName');
 const formEmail = document.getElementById('email');
 const formMessage = document.getElementById('message');
 
-function validName() {
-    const nameError = formName.nextElementSibling;
+function validName(){
     if (formName.value.trim() === '') {
-        nameError.textContent = 'Please type your name';
-        return false;
+        formName.nextElementSibling.textContent = 'Please type your name';
     } else {
-        nameError.textContent = '';
-        return true;
+        formName.nextElementSibling.textContent = '';
     }
 }
 
-function validEmail() {
-    const emailError = formEmail.nextElementSibling;
-    const emailValue = formEmail.value.trim();
-    if (emailValue === '') {
-        emailError.textContent = 'Please type your email';
-        return false;
-    } else if (!emailValue.includes('@')) {
-        emailError.textContent = 'Please type a valid email';
-        return false;
-    } else {
-        emailError.textContent = '';
-        return true;
+function validEmail(){
+    if (formEmail.value.trim() === '') {
+        formEmail.nextElementSibling.textContent = 'Please type your email';
+    } 
+    else if( !((formEmail.value.trim()).includes('@') ) )  {
+        formEmail.nextElementSibling.textContent = '';
+        formEmail.nextElementSibling.textContent = 'Please type a valid email';
+    }
+    else{
+        formEmail.nextElementSibling.textContent = '';
     }
 }
 
-function validMessage() {
-    const messageError = formMessage.nextElementSibling;
+function validateMessage() {
     if (formMessage.value.trim() === '') {
-        messageError.textContent = 'Please type your message';
-        return false;
+        formMessage.nextElementSibling.textContent = 'Please type your message';
     } else {
-        messageError.textContent = '';
-        return true;
+        formMessage.nextElementSibling.textContent = '';
     }
 }
 
-form.addEventListener('submit', async function (e) {
+const submitButton = document.getElementById('submit');
+submitButton.addEventListener('click', (e) => {
+    validName();
+    validEmail();
+    validateMessage();
     e.preventDefault();
-
-    const isNameValid = validName();
-    const isEmailValid = validEmail();
-    const isMessageValid = validMessage();
-
-    if (isNameValid && isEmailValid && isMessageValid) {
-        const formData = {
-            formName: formName.value.trim(),
-            email: formEmail.value.trim(),
-            message: formMessage.value.trim()
-        };
-
-        try {
-            const response = await fetch('/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: new URLSearchParams(formData)
-            });
-
-            if (response.ok) {
-                console.log('Message sent!');
-                alert("Your message was sent!");
-                form.reset(); // optional: clear the form
-            } else {
-                console.error('Server responded with error:', response.status);
-                alert("There was an error sending your message.");
-            }
-        } catch (error) {
-            console.error('Fetch error:', error);
-            alert("Network error. Please try again later.");
-        }
-    }
 });
